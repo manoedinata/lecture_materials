@@ -1,0 +1,5 @@
+# Ignore all files without an extension
+#   => Ignore all files, re-include directories, and then re-include files with extensions
+*
+!*/
+!*.*
