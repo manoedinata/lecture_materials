@@ -1,0 +1,10 @@
+site_name: Lectures
+site_url: https://lectures.ndraa.xyz/
+
+theme:
+  name: material
+
+docs_dir: courses
+
+plugins:
+  - awesome-nav
