@@ -1,0 +1,134 @@
+fromId,toId,timeMinutes,costRupiah,lineName,transportType
+2,37,8,5000,TransJatim Koridor 1,Bus
+37,38,10,5000,TransJatim Koridor 1,Bus
+38,39,9,5000,TransJatim Koridor 1,Bus
+39,3,8,5000,TransJatim Koridor 1,Bus
+3,40,7,5000,TransJatim Koridor 1,Bus
+40,41,12,5000,TransJatim Koridor 1,Bus
+41,42,5,5000,TransJatim Koridor 1,Bus
+42,10,8,5000,TransJatim Koridor 1,Bus
+10,11,3,5000,TransJatim Koridor 1,Bus
+11,12,2,5000,TransJatim Koridor 1,Bus
+12,43,4,5000,TransJatim Koridor 1,Bus
+43,0,3,5000,TransJatim Koridor 1,Bus
+0,30,10,5000,TransJatim Koridor 1,Bus
+30,31,8,5000,TransJatim Koridor 1,Bus
+31,32,6,5000,TransJatim Koridor 1,Bus
+32,33,5,5000,TransJatim Koridor 1,Bus
+33,34,4,5000,TransJatim Koridor 1,Bus
+34,35,3,5000,TransJatim Koridor 1,Bus
+35,36,4,5000,TransJatim Koridor 1,Bus
+36,1,5,5000,TransJatim Koridor 1,Bus
+1,36,5,5000,TransJatim Koridor 1,Bus
+36,35,4,5000,TransJatim Koridor 1,Bus
+35,34,3,5000,TransJatim Koridor 1,Bus
+34,33,5,5000,TransJatim Koridor 1,Bus
+33,32,6,5000,TransJatim Koridor 1,Bus
+32,31,8,5000,TransJatim Koridor 1,Bus
+31,30,6,5000,TransJatim Koridor 1,Bus
+30,0,10,5000,TransJatim Koridor 1,Bus
+0,12,3,5000,TransJatim Koridor 1,Bus
+12,11,2,5000,TransJatim Koridor 1,Bus
+11,10,3,5000,TransJatim Koridor 1,Bus
+10,44,5,5000,TransJatim Koridor 1,Bus
+44,45,7,5000,TransJatim Koridor 1,Bus
+45,46,9,5000,TransJatim Koridor 1,Bus
+46,47,8,5000,TransJatim Koridor 1,Bus
+47,2,10,5000,TransJatim Koridor 1,Bus
+0,5,5,5000,SuroboyoBus R1,Bus
+5,6,4,5000,SuroboyoBus R1,Bus
+6,7,8,5000,SuroboyoBus R1,Bus
+7,8,6,5000,SuroboyoBus R1,Bus
+8,65,4,5000,SuroboyoBus R1,Bus
+65,66,5,5000,SuroboyoBus R1,Bus
+66,9,4,5000,SuroboyoBus R1,Bus
+9,4,6,5000,SuroboyoBus R1,Bus
+4,51,7,5000,SuroboyoBus R1,Bus
+51,17,5,5000,SuroboyoBus R1,Bus
+17,18,4,5000,SuroboyoBus R1,Bus
+18,19,5,5000,SuroboyoBus R1,Bus
+19,20,4,5000,SuroboyoBus R1,Bus
+20,21,5,5000,SuroboyoBus R1,Bus
+21,22,5,5000,SuroboyoBus R1,Bus
+22,23,4,5000,SuroboyoBus R1,Bus
+23,24,3,5000,SuroboyoBus R1,Bus
+24,25,5,5000,SuroboyoBus R1,Bus
+25,26,5,5000,SuroboyoBus R1,Bus
+26,27,5,5000,SuroboyoBus R1,Bus
+27,28,6,5000,SuroboyoBus R1,Bus
+28,29,8,5000,SuroboyoBus R1,Bus
+29,55,5,5000,SuroboyoBus R2,Bus
+55,48,4,5000,SuroboyoBus R2,Bus
+48,56,3,5000,SuroboyoBus R2,Bus
+56,49,3,5000,SuroboyoBus R2,Bus
+49,70,4,5000,SuroboyoBus R2,Bus
+70,50,5,5000,SuroboyoBus R2,Bus
+50,16,5,5000,SuroboyoBus R2,Bus
+16,67,4,5000,SuroboyoBus R2,Bus
+67,15,4,5000,SuroboyoBus R2,Bus
+15,14,6,5000,SuroboyoBus R2,Bus
+14,13,5,5000,SuroboyoBus R2,Bus
+13,6,7,5000,SuroboyoBus R2,Bus
+6,78,4,5000,SuroboyoBus R2,Bus
+78,0,5,5000,SuroboyoBus R2,Bus
+62,71,5,5000,SuroboyoBus R1 (Lanjutan Perak),Bus
+71,72,4,5000,SuroboyoBus R1 (Lanjutan Perak),Bus
+72,73,4,5000,SuroboyoBus R1 (Lanjutan Perak),Bus
+73,53,6,5000,SuroboyoBus R1 (Lanjutan Perak),Bus
+53,54,5,5000,SuroboyoBus R1 (Lanjutan Perak),Bus
+54,52,5,5000,SuroboyoBus R1 (Lanjutan Perak),Bus
+52,29,4,5000,SuroboyoBus R1 (Lanjutan Perak),Bus
+75,76,10,5000,SuroboyoBus TOW-TIJ,Bus
+76,77,6,5000,SuroboyoBus TOW-TIJ,Bus
+77,9,8,5000,SuroboyoBus TOW-TIJ,Bus
+9,4,6,5000,SuroboyoBus TOW-TIJ,Bus
+4,16,5,5000,SuroboyoBus TOW-TIJ,Bus
+16,68,4,5000,SuroboyoBus TOW-TIJ,Bus
+68,69,3,5000,SuroboyoBus TOW-TIJ,Bus
+69,17,4,5000,SuroboyoBus TOW-TIJ,Bus
+17,18,4,5000,SuroboyoBus TOW-TIJ,Bus
+18,19,5,5000,SuroboyoBus TOW-TIJ,Bus
+19,50,4,5000,SuroboyoBus TOW-TIJ,Bus
+50,70,5,5000,SuroboyoBus TOW-TIJ,Bus
+70,56,3,5000,SuroboyoBus TOW-TIJ,Bus
+56,48,3,5000,SuroboyoBus TOW-TIJ,Bus
+48,24,4,5000,SuroboyoBus TOW-TIJ,Bus
+24,51,5,5000,SuroboyoBus TOW-TIJ,Bus
+51,26,5,5000,SuroboyoBus TOW-TIJ,Bus
+26,73,4,5000,SuroboyoBus TOW-TIJ,Bus
+73,72,4,5000,SuroboyoBus TOW-TIJ,Bus
+72,62,4,5000,SuroboyoBus TOW-TIJ,Bus
+0,80,8,5000,SuroboyoBus R4 (Listrik),Bus
+80,81,5,5000,SuroboyoBus R4 (Listrik),Bus
+81,79,7,5000,SuroboyoBus R4 (Listrik),Bus
+79,82,8,5000,SuroboyoBus R4 (Listrik),Bus
+82,83,5,5000,SuroboyoBus R4 (Listrik),Bus
+83,84,4,5000,SuroboyoBus R4 (Listrik),Bus
+84,15,6,5000,SuroboyoBus R4 (Listrik),Bus
+15,13,5,5000,SuroboyoBus R4 (Listrik),Bus
+13,6,7,5000,SuroboyoBus R4 (Listrik),Bus
+6,5,4,5000,SuroboyoBus R4 (Listrik),Bus
+5,0,5,5000,SuroboyoBus R4 (Listrik),Bus
+0,59,12,5000,TransJatim Koridor 5,Bus
+59,60,6,5000,TransJatim Koridor 5,Bus
+60,61,5,5000,TransJatim Koridor 5,Bus
+61,57,8,5000,TransJatim Koridor 5,Bus
+57,58,7,5000,TransJatim Koridor 5,Bus
+58,74,6,5000,TransJatim Koridor 5,Bus
+74,63,15,5000,TransJatim Koridor 5,Bus
+63,64,8,5000,TransJatim Koridor 5,Bus
+64,63,8,5000,TransJatim Koridor 5,Bus
+63,74,15,5000,TransJatim Koridor 5,Bus
+74,58,6,5000,TransJatim Koridor 5,Bus
+58,57,7,5000,TransJatim Koridor 5,Bus
+57,61,8,5000,TransJatim Koridor 5,Bus
+61,60,5,5000,TransJatim Koridor 5,Bus
+60,59,6,5000,TransJatim Koridor 5,Bus
+59,62,10,5000,TransJatim Koridor 5,Bus
+62,0,12,5000,TransJatim Koridor 5,Bus
+4,11,2,0,Interchange Joyoboyo-TransitPoint,Interchange
+11,4,2,0,Interchange Joyoboyo-TransitPoint,Interchange
+0,11,3,0,Interchange Purabaya-TransitPoint,Interchange
+11,0,3,0,Interchange Purabaya-TransitPoint,Interchange
+28,62,5,0,Interchange Rajawali-Perak,Interchange
+62,28,5,0,Interchange Rajawali-Perak,Interchange

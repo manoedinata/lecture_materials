@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Public Transport Planner</title>
+    <!-- Load Leaflet.js (Map Library) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; display: flex; height: 100vh; }
+        #sidebar { width: 350px; padding: 20px; background: #f8f9fa; box-shadow: 2px 0 5px rgba(0,0,0,0.1); z-index: 1000; overflow-y: auto; }
+        #map { flex-grow: 1; height: 100%; }
+        .form-group { margin-bottom: 15px; }
+        select, button { width: 100%; padding: 10px; margin-top: 5px; }
+        button { background-color: #007bff; color: white; border: none; cursor: pointer; font-weight: bold; }
+        button:hover { background-color: #0056b3; }
+        #result { margin-top: 20px; padding: 15px; background: #e9ecef; border-radius: 5px; display: none; }
+    </style>
+</head>
+<body>
+
+<div id="sidebar">
+    <h2>Transport Planner</h2>
+    <div class="form-group">
+        <label>Asal:</label>
+        <select id="src"></select>
+    </div>
+    <div class="form-group">
+        <label>Tujuan:</label>
+        <select id="dest"></select>
+    </div>
+    <div class="form-group">
+        <label>Mode Rute:</label><br>
+        <input type="radio" name="mode" value="time" checked> Tercepat (Dijkstra Waktu)<br>
+        <input type="radio" name="mode" value="cost"> Termurah (Dijkstra Biaya)<br>
+        <input type="radio" name="mode" value="transit"> Transit Paling Sedikit (BFS)<br>
+    </div>
+    <button onclick="findRoute()">Cari Rute</button>
+
+    <div id="result">
+        <h3 style="margin-top:0;">Hasil Pencarian</h3>
+        <p><b>Waktu:</b> <span id="resTime"></span> menit</p>
+        <p><b>Biaya:</b> Rp <span id="resCost"></span></p>
+        <p><b>Transit:</b> <span id="resTransit"></span> kali</p>
+    </div>
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+    // Init Map
+    const map = L.map('map').setView([-6.2088, 106.8456], 12); // Kordinat tengah Jakarta
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    let stationData = {};
+    let currentPolyline = null;
+    let markers = [];
+
+    // Load Stations API
+    fetch('/api/stations')
+        .then(response => response.json())
+        .then(stations => {
+            const srcSelect = document.getElementById('src');
+            const destSelect = document.getElementById('dest');
+
+            stations.forEach(s => {
+                stationData[s.id] = s;
+                
+                // Tambah opsi dropdown
+                srcSelect.innerHTML += `<option value="${s.id}">${s.name}</option>`;
+                destSelect.innerHTML += `<option value="${s.id}">${s.name}</option>`;
+
+                // Pasang marker stasiun di peta
+                let marker = L.marker([s.lat, s.lon]).addTo(map).bindPopup(s.name);
+                markers.push(marker);
+            });
+        });
+
+    // Action Cari Rute
+    function findRoute() {
+        const src = document.getElementById('src').value;
+        const dest = document.getElementById('dest').value;
+        const mode = document.querySelector('input[name="mode"]:checked').value;
+
+        if (src === dest) {
+            alert("Stasiun asal dan tujuan tidak boleh sama.");
+            return;
+        }
+
+        fetch(`/api/route?src=${src}&dest=${dest}&mode=${mode}`)
+            .then(res => res.json())
+            .then(data => {
+                if (!data.found) {
+                    alert("Rute tidak ditemukan!"); return;
+                }
+                
+                // Update text di Sidebar
+                document.getElementById('result').style.display = 'block';
+                document.getElementById('resTime').innerText = data.time;
+                document.getElementById('resCost').innerText = data.cost;
+                document.getElementById('resTransit').innerText = data.transits;
+
+                // Gambar Rute di Peta (Garis Poligon)
+                if (currentPolyline) map.removeLayer(currentPolyline);
+                const pathCoords = data.path.map(id => [stationData[id].lat, stationData[id].lon]);
+                currentPolyline = L.polyline(pathCoords, {color: 'red', weight: 5, opacity: 0.7}).addTo(map);
+                map.fitBounds(currentPolyline.getBounds());
+            });
+    }
+</script>
+</body>
+</html>

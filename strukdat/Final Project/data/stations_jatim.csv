@@ -1,0 +1,86 @@
+id,name,city,type,latitude,longitude
+0,Terminal Purabaya (Bungurasih),Surabaya,BusTerminal,-7.3574,112.7272
+1,Terminal Bunder,Gresik,BusTerminal,-7.1492,112.6558
+2,Terminal Porong,Sidoarjo,BusTerminal,-7.5369,112.6896
+3,Terminal Larangan,Sidoarjo,BusTerminal,-7.4627,112.7064
+4,Terminal Intermoda Joyoboyo,Surabaya,BusTerminal,-7.2989,112.7239
+5,Halte Dukuh Menanggal,Surabaya,BusStop,-7.3382,112.7285
+6,Halte Siwalankerto,Surabaya,BusStop,-7.3478,112.7285
+7,Halte Taman Pelangi,Surabaya,BusStop,-7.3263,112.7271
+8,Halte RS Bhayangkara,Surabaya,BusStop,-7.3192,112.7258
+9,Halte Ketintang,Surabaya,BusStop,-7.3072,112.7231
+10,Halte Pondok Mutiara,Surabaya,BusStop,-7.3532,112.7278
+11,Halte Transit Point TransJatim,Surabaya,Interchange,-7.3556,112.7275
+12,Halte Bungurasih Luar,Surabaya,BusStop,-7.3580,112.7280
+13,Halte Jemur Ngawinan,Surabaya,BusStop,-7.3178,112.7412
+14,Halte Wonocolo,Surabaya,BusStop,-7.3276,112.7378
+15,Halte Margorejo,Surabaya,BusStop,-7.3084,112.7369
+16,Halte Joyoboyo 2,Surabaya,BusStop,-7.2996,112.7243
+17,Halte RS Darmo,Surabaya,BusStop,-7.2904,112.7261
+18,Halte Pandegiling,Surabaya,BusStop,-7.2841,112.7248
+19,Halte Urip Sumoharjo,Surabaya,BusStop,-7.2783,112.7283
+20,Halte Basra,Surabaya,BusStop,-7.2751,112.7344
+21,Halte Kaliasin,Surabaya,BusStop,-7.2672,112.7381
+22,Halte Embong Malang,Surabaya,BusStop,-7.2644,112.7402
+23,Halte Blauran,Surabaya,BusStop,-7.2608,112.7394
+24,Halte Pirngadi,Surabaya,BusStop,-7.2537,112.7335
+25,Halte Pasar Turi,Surabaya,BusStop,-7.2479,112.7283
+26,Halte Masjid Kemayoran,Surabaya,BusStop,-7.2416,112.7263
+27,Halte Indrapura,Surabaya,BusStop,-7.2361,112.7298
+28,Halte Rajawali,Surabaya,BusStop,-7.2298,112.7331
+29,Pelabuhan Tanjung Perak,Surabaya,BusStop,-7.2027,112.7326
+30,Halte Segoromadu I,Gresik,BusStop,-7.1736,112.6722
+31,Halte Gelora Joko Samudra I,Gresik,BusStop,-7.1654,112.6655
+32,Halte BNI Gresik,Gresik,BusStop,-7.1608,112.6601
+33,Halte RS Semen Gresik,Gresik,BusStop,-7.1564,112.6583
+34,Halte UMG (Univ Muhammadiyah Gresik),Gresik,BusStop,-7.1532,112.6571
+35,Halte Polres Gresik,Gresik,BusStop,-7.1508,112.6560
+36,Halte Kantor Bupati Gresik,Gresik,BusStop,-7.1501,112.6553
+37,Halte Gedang,Sidoarjo,BusStop,-7.5171,112.6913
+38,Halte Tanggulangin,Sidoarjo,BusStop,-7.5021,112.6932
+39,Halte Keramean,Sidoarjo,BusStop,-7.4872,112.7001
+40,Halte Lemahputro,Sidoarjo,BusStop,-7.4731,112.7028
+41,Halte Alun-Alun Sidoarjo,Sidoarjo,BusStop,-7.4473,112.7182
+42,Halte Sun City (Matahari City),Sidoarjo,BusStop,-7.4412,112.7224
+43,Halte Pondok Jati,Surabaya,BusStop,-7.3612,112.7268
+44,Halte Celep,Sidoarjo,BusStop,-7.4361,112.7251
+45,Halte Bligo,Sidoarjo,BusStop,-7.4651,112.7081
+46,Halte Ngampelsari,Sidoarjo,BusStop,-7.4812,112.6981
+47,Halte Kalitengah,Sidoarjo,BusStop,-7.4961,112.6941
+48,Halte Siola / Tunjungan,Surabaya,BusStop,-7.2568,112.7378
+49,Halte Gubernur Suryo,Surabaya,BusStop,-7.2612,112.7401
+50,Halte Sono Kembang,Surabaya,BusStop,-7.2698,112.7332
+51,Halte Museum Bank Indonesia,Surabaya,BusStop,-7.2541,112.7314
+52,Halte Pelindo,Surabaya,BusStop,-7.2118,112.7321
+53,Halte Barunawati,Surabaya,BusStop,-7.2208,112.7329
+54,Halte Ikan Kerapu,Surabaya,BusStop,-7.2278,112.7341
+55,Halte Alun-Alun Contong,Surabaya,BusStop,-7.2332,112.7342
+56,Halte Simpang Dukuh,Surabaya,BusStop,-7.2591,112.7365
+57,Halte Kenjeran,Surabaya,BusStop,-7.2421,112.7844
+58,Halte Kedung Cowek,Surabaya,BusStop,-7.2311,112.7921
+59,Halte Semampir,Surabaya,BusStop,-7.2491,112.7712
+60,Halte Sidotopo,Surabaya,BusStop,-7.2571,112.7641
+61,Halte Simokerto,Surabaya,BusStop,-7.2512,112.7573
+62,Halte Morokrembangan,Surabaya,BusStop,-7.2151,112.7289
+63,Terminal Bangkalan,Bangkalan,BusTerminal,-7.0432,112.7453
+64,Halte Alun-Alun Bangkalan,Bangkalan,BusStop,-7.0561,112.7398
+65,Halte UBHARA,Surabaya,BusStop,-7.3231,112.7264
+66,Halte Pusvetma,Surabaya,BusStop,-7.3152,112.7248
+67,Halte RSAL,Surabaya,BusStop,-7.3051,112.7261
+68,Halte Santa Maria,Surabaya,BusStop,-7.2868,112.7278
+69,Halte Marmoyo,Surabaya,BusStop,-7.2921,112.7251
+70,Halte Pangsud,Surabaya,BusStop,-7.2641,112.7388
+71,Halte Perak Timur,Surabaya,BusStop,-7.2092,112.7301
+72,Halte Sarwajala,Surabaya,BusStop,-7.2171,112.7318
+73,Halte Al Irsyad,Surabaya,BusStop,-7.2251,112.7312
+74,Halte Pogot,Surabaya,BusStop,-7.2361,112.7878
+75,Halte Unesa (TOW),Surabaya,BusStop,-7.2918,112.6908
+76,Halte Samsat Tandes,Surabaya,BusStop,-7.2784,112.7041
+77,Halte Margomulyo,Surabaya,BusStop,-7.2612,112.7051
+78,Halte Kertomenanggal,Surabaya,BusStop,-7.3418,112.7295
+79,Halte Terminal Bratang,Surabaya,BusStop,-7.2978,112.7524
+80,Halte Jemursari RSI,Surabaya,BusStop,-7.3172,112.7468
+81,Halte Taman Flora,Surabaya,BusStop,-7.3058,112.7498
+82,Halte RSUD Dr Soetomo,Surabaya,BusStop,-7.2771,112.7498
+83,Halte Unair Kampus A,Surabaya,BusStop,-7.2708,112.7548
+84,Halte Unair Kampus C,Surabaya,BusStop,-7.2868,112.7588
