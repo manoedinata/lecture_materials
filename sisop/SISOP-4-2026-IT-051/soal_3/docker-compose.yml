@@ -1,0 +1,24 @@
+services:
+  # Server
+  libraryit-server:
+    build: .
+    container_name: libraryit-server
+    ports:
+      - 1445:445
+    volumes:
+      - ./data:/libraryit
+      - ./logs:/logs
+    restart: no
+
+  # Logger
+  libraryit-logger:
+    image: alpine:latest
+    container_name: libraryit-logger
+    depends_on:
+      - libraryit-server
+    volumes:
+      - ./logs:/logs
+
+    # Tampilkan output real-time dari file log host
+    command: tail -f /logs/libraryit.log
+    restart: no

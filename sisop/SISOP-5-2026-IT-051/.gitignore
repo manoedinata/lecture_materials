@@ -1,0 +1,9 @@
+soal_1/linux
+soal_1/osboot/*.zip
+soal_1/dnm_pkgs.txt
+soal_1/test_fuse.sh
+
+soal_2/*.bin
+soal_2/*.o
+soal_2/floppy.img
+soal_2/bochslog.txt
