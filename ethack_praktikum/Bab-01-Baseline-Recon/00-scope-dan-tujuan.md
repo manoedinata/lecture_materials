@@ -1,0 +1,6 @@
+- Scope: 192.168.56.1 (Host-only network bridge)
+- Port: 3000
+- Service: HTTP web server
+- Tujuan: Latihan baseline reconnaissance & pembiasaan dokumentasi
+- Tanggal: 4 September 2026
+- Dilakukan oleh: Hendra
