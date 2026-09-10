@@ -5,6 +5,14 @@
 
 set -e
 
+# Deteksi user lab. Di VM hasil "vagrant up" ini akan bernilai "vagrant" (user
+# bawaan box kalilinux/rolling). Kalau script dijalankan manual dengan sudo di
+# Kali VM biasa (Bab 1), nilainya mengikuti user yang memanggil sudo, mis. "kali".
+LAB_USER="${SUDO_USER:-$(id -nu 1000 2>/dev/null || echo root)}"
+LAB_HOME="$(getent passwd "$LAB_USER" | cut -d: -f6)"
+LAB_HOME="${LAB_HOME:-/root}"
+echo "[*] User lab terdeteksi: $LAB_USER (home: $LAB_HOME)"
+
 echo "[*] Update package list..."
 apt-get update -y
 
@@ -34,12 +42,13 @@ else
     echo "    Docker sudah terpasang, dilewati."
 fi
 
-usermod -aG docker vagrant || true
+usermod -aG docker "$LAB_USER" || true
 
 echo "[*] Membuat struktur folder catatan lab Bab 2..."
-sudo -u vagrant mkdir -p /home/vagrant/Lab-Notes/Bab-02-OSINT/screenshot
-sudo -u vagrant touch /home/vagrant/Lab-Notes/Bab-02-OSINT/00-scope-dan-tujuan.md
-sudo -u vagrant touch /home/vagrant/Lab-Notes/Bab-02-OSINT/01-osint-notes.md
+NOTES_DIR="$LAB_HOME/Lab-Notes/Bab-02-OSINT"
+sudo -u "$LAB_USER" mkdir -p "$NOTES_DIR/screenshot"
+sudo -u "$LAB_USER" touch "$NOTES_DIR/00-scope-dan-tujuan.md"
+sudo -u "$LAB_USER" touch "$NOTES_DIR/01-osint-notes.md"
 
 echo "[*] Selesai! Jalankan 'docker compose up -d' di folder resource untuk menghidupkan target PT Contoh Nusantara."
 echo "[*] Lalu gunakan osint_recon.sh untuk automasi sebagian langkah OSINT."
