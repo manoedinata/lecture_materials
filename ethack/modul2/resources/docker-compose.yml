@@ -1,0 +1,17 @@
+services:
+  contoh-nusantara-web:
+    image: nginx:alpine
+    container_name: contoh-nusantara-web
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ./www:/usr/share/nginx/html:ro
+      - ./nginx-default.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - labnet
+
+networks:
+  labnet:
+    driver: bridge
+    internal: false   # set true untuk isolasi total tanpa akses internet dari container

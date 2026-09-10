@@ -1,0 +1,30 @@
+# Vagrantfile - Bab 2: Setup Kali dengan tools OSINT
+#
+# Menyediakan 1 VM Kali Linux (attacker) dengan:
+#   - Jaringan host-only/internal terisolasi (192.168.56.11)
+#   - Tools OSINT terpasang otomatis: whois, dnsutils, theHarvester, exiftool
+#   - Docker terpasang untuk menjalankan target latihan "PT Contoh Nusantara"
+#
+# Cara pakai:
+#   1. Install VirtualBox (virtualbox.org) dan Vagrant (vagrantup.com)
+#   2. Dari folder ini, jalankan: vagrant up
+#   3. Masuk ke VM: vagrant ssh
+#
+# Catatan: jika sudah punya Kali VM dari Bab 1, kamu tidak perlu membuat VM baru.
+# Cukup jalankan provision.sh secara manual di dalam VM yang sudah ada:
+#   chmod +x provision.sh && sudo ./provision.sh
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "kalilinux/rolling"
+  config.vm.hostname = "kali-attacker-bab2"
+
+  config.vm.network "private_network", ip: "192.168.56.11"
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "Bab02-Kali-OSINT"
+    vb.memory = "4096"
+    vb.cpus = 2
+  end
+
+  config.vm.provision "shell", path: "provision.sh"
+end

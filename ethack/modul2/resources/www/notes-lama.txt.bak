@@ -1,0 +1,8 @@
+CATATAN INTERNAL - JANGAN DI-COMMIT KE WEBSITE PUBLIK!!
+
+- VPN internal: vpn.contoh-nusantara.local (belum dinonaktifkan meski proyek migrasi cloud tertunda sejak Q2)
+- Kontak eskalasi darurat server: Budi Santoso (Tim IT) - budi.santoso@contoh-nusantara.co.id
+- CMS yang dipakai: NusantaraCMS v2.3.1 - vendor bilang ada patch keamanan tapi belum sempat diupdate
+- Reminder: ganti password default staging yang masih dipakai dari 2 tahun lalu
+
+(File ini sengaja ditinggal di server sebagai bahan latihan OSINT hands-on)

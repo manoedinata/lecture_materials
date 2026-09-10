@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /internal/
+Disallow: /backup/
+Disallow: /notes-lama.txt.bak
