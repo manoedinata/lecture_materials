@@ -13,6 +13,20 @@ LAB_HOME="$(getent passwd "$LAB_USER" | cut -d: -f6)"
 LAB_HOME="${LAB_HOME:-/root}"
 echo "[*] User lab terdeteksi: $LAB_USER (home: $LAB_HOME)"
 
+# Kali rolling adalah turunan Debian testing dan VERSION_CODENAME-nya bernilai
+# "kali-rolling" -- suite yang tidak pernah diterbitkan Docker. Jadi codename
+# Debian dipilih manual. Override kalau perlu:
+#   DOCKER_DEB_CODENAME=trixie sudo -E ./provision.sh
+DOCKER_DEB_CODENAME="${DOCKER_DEB_CODENAME:-bookworm}"
+DOCKER_LIST=/etc/apt/sources.list.d/docker.list
+
+# Buang sisa repo Docker yang salah suite (mis. kali-rolling dari versi script
+# lama), supaya apt-get update di bawah tidak langsung gagal.
+if [ -f "$DOCKER_LIST" ] && ! grep -q " $DOCKER_DEB_CODENAME " "$DOCKER_LIST"; then
+    echo "[!] Repo Docker lama dengan suite tidak valid ditemukan, dihapus: $DOCKER_LIST"
+    rm -f "$DOCKER_LIST"
+fi
+
 echo "[*] Update package list..."
 apt-get update -y
 
@@ -34,8 +48,8 @@ if ! command -v docker &> /dev/null; then
     chmod a+r /etc/apt/keyrings/docker.asc
     echo \
       "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
-      $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-      tee /etc/apt/sources.list.d/docker.list > /dev/null
+      $DOCKER_DEB_CODENAME stable" | \
+      tee "$DOCKER_LIST" > /dev/null
     apt-get update -y
     apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 else
